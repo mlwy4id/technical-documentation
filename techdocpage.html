@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panduan Dasar Pemrograman C</title>
+    <link rel="stylesheet" href="techdocpage.css" />
+  </head>
+  <body>
+    <main id="main-doc">
+      <nav id="navbar">
+        <header>Panduan Bahasa C</header>
+        <a class="nav-link" href="#pendahuluan">Pendahuluan</a>
+        <a class="nav-link" href="#persiapan_lingkungan">Persiapan Lingkungan</a>
+        <a class="nav-link" href="#struktur_dasar_program_c">Struktur Dasar Program C</a>
+        <a class="nav-link" href="#pointer_pada_c">Pointer pada C</a>
+        <a class="nav-link" href="#tips_dan_trik_pemrograman_c">Tips dan Trik Pemrograman C</a>
+        
+      </nav>
+      <div>
+        <section class="main-section" id="pendahuluan">
+          <header>Pendahuluan</header>
+          <article>
+            <p>
+              Bahasa C adalah bahasa pemrograman tingkat rendah yang sangat
+              berpengaruh dalam dunia pengembangan perangkat lunak modern.
+              Dikenal karena efisiensinya, C digunakan untuk membangun sistem
+              operasi, perangkat keras, serta perangkat lunak aplikasi yang
+              memerlukan akses langsung ke perangkat keras. Belajar bahasa C
+              memberikan pemahaman yang lebih baik tentang cara komputer bekerja
+              di tingkat dasar.
+            </p>
+            <p>
+              Bahasa C diciptakan oleh Dennis Ritchie pada tahun 1972 di Bell
+              Labs. C sangat berpengaruh dalam pengembangan bahasa pemrograman
+              lainnya, seperti C++, C#, dan bahkan Java. Pada awalnya, C
+              digunakan untuk membangun sistem operasi UNIX, yang masih
+              digunakan hingga saat ini.
+            </p>
+
+            <p class="bold">Keunggulan Bahasa C:</p>
+            <ul>
+              <li>Portabilitas tinggi (dapat berjalan di banyak platform)</li>
+              <li>
+                Kemampuan untuk berinteraksi langsung dengan perangkat keras
+              </li>
+              <li>Efisiensi dalam pemrosesan dan penggunaan memori</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="main-section" id="persiapan_lingkungan">
+          <header>Persiapan Lingkungan</header>
+          <article>
+            <p>
+              Untuk memulai pemrograman menggunakan bahasa C, Anda harus
+              menyiapkan lingkungan pengembangan terlebih dahulu. Ini melibatkan
+              instalasi compiler dan editor teks yang sesuai dengan sistem
+              operasi Anda.
+            </p>
+
+            <ul>
+              <li class="bold">Instalasi Compiler</li>
+              <p>
+                Anda dapat menggunakan GNU Compiler Collection (GCC), yang
+                merupakan compiler C paling populer dan tersedia untuk berbagai
+                platform. Di bawah ini adalah langkah-langkah untuk menginstal
+                GCC di sistem operasi Linux:
+                <code>
+                  sudo apt update<br />
+                  sudo apt install gcc
+                </code>
+                Untuk Windows, Anda dapat menggunakan IDE seperti Code::Blocks
+                atau Visual Studio Code yang sudah dilengkapi dengan compiler C.
+              </p>
+            </ul>
+          </article>
+        </section>
+
+        <section class="main-section" id="struktur_dasar_program_c">
+          <header>Struktur Dasar Program C</header>
+          <article>
+            <p>
+              Setiap program C minimal harus memiliki fungsi main() yang menjadi
+              titik awal eksekusi program. Struktur program C sangat sederhana
+              dan terdiri dari beberapa elemen dasar, seperti header file,
+              fungsi utama, dan pernyataan lainnya.
+            </p>
+
+            <code>
+              #include <stdio.h><br> int main() {<br />
+              printf("Hello, World!\n");<br />
+              return 0;<br />
+              }
+            </code>
+
+            <p class="bold">Penjelasan:</p>
+            <ul>
+              <li>
+                <code>#include <stdio.h></code> Mengimpor pustaka standar I/O
+                untuk fungsi seperti printf.
+              </li>
+              <li>
+                <code>int main()</code> Fungsi utama program yang selalu
+                dikembalikan tipe int.
+              </li>
+              <li>
+                <code>printf("Halo, Dunia!\n");</code> Perintah untuk mencetak
+                output ke layar.
+              </li>
+              <li>
+                <code>return 0;</code> Menandakan bahwa program selesai dengan
+                sukses.
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="main-section" id="pointer_pada_c">
+          <header>Pointer pada C</header>
+          <article>
+            <p>
+              Pointer adalah salah satu fitur paling kuat dan fleksibel dalam
+              bahasa C. Pointer memungkinkan program untuk mengakses dan
+              memanipulasi memori secara langsung, memberi kontrol penuh
+              terhadap bagaimana data disimpan dan diakses.
+            </p>
+
+            <p class="bold">Deklarasi</p>
+            <code>
+              int *p, a = 10;<br />
+              p = a;<br />
+              printf("%d", *p); // Output: 10
+            </code>
+
+            <p class="bold">Fungsi dengan Pointer</p>
+            <code>
+              void ubahNilai(int *p) {<br />
+              *p = 20;<br />
+              }
+            </code>
+          </article>
+        </section>
+
+        <section class="main-section" id="tips_dan_trik_pemrograman_c">
+          <header>Tips dan Trik Pemrograman C</header>
+          <article>
+            <p>
+              Pemrograman dalam bahasa C membutuhkan kehati-hatian dan pemahaman
+              mendalam tentang manajemen memori dan struktur data. Berikut
+              adalah beberapa tips yang berguna:
+            </p>
+            <ul>
+              <li>
+                Gunakan <span>const</span> untuk mendeklarasikan variabel yang nilainya tidak
+                akan berubah.
+              </li>
+              <li>Selalu inisialisasi pointer sebelum digunakan.</li>
+              <li>
+                Hindari penggunaan buffer yang tidak cukup besar saat membaca
+                input dari pengguna untuk mencegah buffer overflow.
+              </li>
+              <li>
+                Gunakan fungsi-fungsi dari pustaka standar C untuk mempermudah
+                pemrograman, seperti malloc untuk alokasi memori dinamis.
+              </li>
+            </ul>
+          </article>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
